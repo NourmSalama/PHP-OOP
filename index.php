@@ -1,14 +1,8 @@
 <?php
 
-class Customer {
+    $firstNumber = readline('Enter first number: ');
+    $secondNumber = readline('Enter second number: ');
+    $calculation = readline('Enter calculation: ');
 
-    public $id = 0;
-
-    public function getCustomer($id) {
-        return $this->id = $id;
-    }
-}
-
-$customer = new Customer();
-
-echo $customer->getCustomer(10);
+    $calculator = new Calculator($firstNumber, $secondNumber, $calculation);
+    echo $calculator->calculate();
