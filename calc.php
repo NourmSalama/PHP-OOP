@@ -12,6 +12,12 @@ class Calculator {
         $this->calculation = $calculation;
     }
 
+    public function checkInput() {
+        if (!is_numeric($this->firstNumber) || !is_numeric($this->secondNumber)) {
+            return 'Invalid input';
+        }
+    }
+
     public function calculate() {
         switch ($this->calculation) {
             case '+':
@@ -20,14 +26,14 @@ class Calculator {
             case '-':
                 $result =  $this->firstNumber - $this->secondNumber;
                 break;
-            case '*':
+            case 'x':
                 $result =  $this->firstNumber * $this->secondNumber;
                 break;
-            case '/':
+            case ':':
                 $result =  $this->firstNumber / $this->secondNumber;
                 break;
             default:
-                return 'Invalid operation';
+                return 'Syntax error in calculation';
         }
         return $result;
     }
