@@ -11,4 +11,4 @@ class Customer {
 
 $customer = new Customer();
 
-echo $customer->getCustomer(22);
+echo $customer->getCustomer(10);
